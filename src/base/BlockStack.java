@@ -1,3 +1,5 @@
+package base;
+
 /**
  * Class BlockStack
  * Implements character block stack and operations upon it.
@@ -11,11 +13,6 @@
  */
 class BlockStack
 {
-	/**
-	 * Counter for the amount of times the stack is accessed
-	 */
-	public int stackAccessCounter = 0;
-
 	/**
 	 * # of letters in the English alphabet + 2
 	 */
@@ -77,7 +74,6 @@ class BlockStack
 	 */
 	public char pick()
 	{
-		stackAccessCounter++;
 		return this.acStack[this.iTop];
 	}
 
@@ -87,7 +83,6 @@ class BlockStack
 	 */
 	public char getAt(final int piPosition)
 	{
-		stackAccessCounter++;
 		return this.acStack[piPosition];
 	}
 
@@ -96,7 +91,6 @@ class BlockStack
 	 */
 	public void push(final char pcBlock)
 	{
-		stackAccessCounter++;
 		this.acStack[++this.iTop] = pcBlock;
 	}
 
@@ -106,7 +100,6 @@ class BlockStack
 	 */
 	public char pop()
 	{
-		stackAccessCounter++;
 		char cBlock = this.acStack[this.iTop];
 		this.acStack[this.iTop--] = '$'; // Leave prev. value undefined
 		return cBlock;
