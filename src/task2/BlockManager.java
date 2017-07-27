@@ -1,6 +1,7 @@
 package task2;// Import (aka include) some stuff.
 
 import common.BaseThread;
+import exception.IllegalOperationException;
 
 /**
  * Class BlockManager
@@ -185,6 +186,9 @@ public class BlockManager
 					soStack.pick() + "."
 				);
 			}
+			catch(IllegalOperationException e) {
+				reportException(e);
+			}
 			catch(Exception e)
 			{
 				reportException(e);
@@ -243,6 +247,9 @@ public class BlockManager
 					soStack.pick() + "."
 				);
 			}
+			catch(IllegalOperationException e) {
+				reportException(e);
+			}
 			catch(Exception e)
 			{
 				reportException(e);
@@ -287,6 +294,9 @@ public class BlockManager
 					System.out.println(".");
 
 				}
+			}
+			catch(IllegalOperationException e) {
+				reportException(e);
 			}
 			catch(Exception e)
 			{

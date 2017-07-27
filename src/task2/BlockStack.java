@@ -111,9 +111,12 @@ class BlockStack {
      */
     public char pop() {
         stackAccessCounter++;
+
         if (isEmpty())
             throw new IllegalOperationException("Cannot pop an empty stack");
+
         char cBlock = this.acStack[this.iTop];
+
         this.acStack[this.iTop--] = '$'; // Leave prev. value undefined
         return cBlock;
     }
