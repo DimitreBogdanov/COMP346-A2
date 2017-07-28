@@ -36,7 +36,7 @@ public class BaseThread extends Thread
 	/**
 	 * TID of a thread to proceed to the phase II.
 	 */
-	private static int siTurn = 1;
+	private static int siTurn = 7;
 
 	/*
 	 * ------------
@@ -156,9 +156,9 @@ public class BaseThread extends Thread
 		{
 			// set siTurn = siTurn +/- 1;
 			if(pcIncreasingOrder == true)
-				siTurn++;
-			else
 				siTurn--;
+			else
+				siTurn++;
 
 			return true;
 		}
